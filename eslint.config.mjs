@@ -5,7 +5,6 @@ import prettierPlugin from 'eslint-plugin-prettier';
 export default [
   pluginJs.configs.recommended,
 
-  // Custom configuration
   {
     languageOptions: {
       ecmaVersion: 2021,
@@ -13,6 +12,12 @@ export default [
       globals: {
         ...globals.browser,
         ...globals.node,
+        jest: 'readonly', 
+        describe: 'readonly',
+        test: 'readonly',
+        expect: 'readonly',
+        beforeEach: 'readonly',
+        afterEach: 'readonly', 
       },
     },
     plugins: {
